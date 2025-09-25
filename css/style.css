@@ -1,0 +1,1378 @@
+/* Client-First Digital - Premium Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/* CSS Variables for Theme */
+:root {
+  --primary-emerald: #10b981;
+  --primary-gold: #fbbf24;
+  --text-white: #ffffff;
+  --text-black: #000000;
+  --text-gray-light: #f8fafc;
+  --text-gray-dark: #1e293b;
+  --bg-primary: #000000;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card-hover: rgba(255, 255, 255, 0.1);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-dark: rgba(0, 0, 0, 0.1);
+  --shadow-light: 0 10px 40px rgba(0, 0, 0, 0.1);
+  --shadow-dark: 0 10px 40px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Mode Variables */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-white: #1e293b;
+  --text-black: #ffffff;
+  --text-gray-light: #64748b;
+  --text-gray-dark: #0f172a;
+  --bg-card: rgba(248, 250, 252, 0.8);
+  --bg-card-hover: rgba(226, 232, 240, 0.9);
+  --border-light: rgba(148, 163, 184, 0.2);
+  --border-dark: rgba(30, 41, 59, 0.1);
+  --shadow-light: 0 10px 40px rgba(0, 0, 0, 0.08);
+  --shadow-dark: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-transitioning {
+  transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+.theme-transitioning * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Typography */
+.heading-primary {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.heading-secondary {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.heading-tertiary {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.text-large {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+/* Gradient Text Effects */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-emerald), var(--primary-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-toggles {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  transition: var(--transition);
+}
+
+.logo-dark {
+  display: block;
+}
+
+.logo-light {
+  display: none;
+}
+
+[data-theme="light"] .logo-dark {
+  display: none;
+}
+
+[data-theme="light"] .logo-light {
+  display: block;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-emerald);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: var(--primary-emerald);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.btn-cta {
+  background: linear-gradient(135deg, var(--primary-emerald), var(--primary-gold));
+  color: #000000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+}
+
+[data-theme="light"] .btn-cta:hover {
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-white);
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-card-hover);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle i {
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .theme-toggle {
+  background: var(--bg-card);
+  border-color: var(--border-light);
+  color: var(--text-white);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+/* Mobile Menu Toggle */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Container and Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.section-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+/* Hero Carousel */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(16, 185, 129, 0.1));
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  z-index: 2;
+  color: #ffffff !important;
+}
+
+.hero-content * {
+  color: #ffffff !important;
+}
+
+.hero-subtitle {
+  color: var(--primary-emerald) !important;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-hero .hero-content {
+  color: #ffffff !important;
+}
+
+.section-hero .hero-content * {
+  color: #ffffff !important;
+}
+
+.section-hero .hero-subtitle {
+  color: var(--primary-emerald) !important;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 3;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.indicator.active {
+  background: var(--primary-emerald);
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-dark);
+}
+
+[data-theme="light"] .card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-light);
+}
+
+[data-theme="light"] .card:hover {
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow-dark);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-emerald), var(--primary-gold));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--text-black);
+}
+
+/* Grid Layouts */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Services Page Styles */
+.service-category {
+  margin-bottom: 4rem;
+}
+
+.service-category-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--primary-emerald);
+}
+
+.service-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-item:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-dark);
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  color: var(--text-white);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.service-description {
+  color: var(--text-gray-light);
+  margin-bottom: 1.5rem;
+}
+
+.service-benefits {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.service-benefits li {
+  padding: 0.25rem 0;
+  color: var(--text-gray-light);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.service-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-emerald);
+  font-weight: bold;
+}
+
+.service-meta {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.service-price {
+  color: var(--primary-gold);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.service-timeline {
+  color: var(--text-gray-light);
+  font-size: 0.9rem;
+}
+
+/* Portfolio Page Styles */
+.portfolio-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--primary-emerald), var(--primary-gold));
+  color: var(--text-black);
+  border-color: transparent;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: var(--transition);
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-theme="light"] .portfolio-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-light);
+}
+
+[data-theme="light"] .portfolio-item:hover {
+  box-shadow: var(--shadow-dark);
+}
+
+.portfolio-item.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-dark);
+}
+
+.portfolio-image {
+  width: 100%;
+  max-height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+/* Override base styles for non-UI/UX items to prevent conflicts */
+.portfolio-item:not([data-categories*="ui-ux"]) .portfolio-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+/* UI/UX Images - Slow Scrolling Hover Effect - MUST COME AFTER BASE STYLES */
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"] .portfolio-image {
+  overflow: hidden !important;
+  position: relative !important;
+  height: 250px !important;
+  /* Fixed container height */
+}
+
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"] .portfolio-image img {
+  width: 100% !important;
+  height: 800px !important;
+  /* Taller than container to allow scrolling */
+  object-fit: cover !important;
+  object-position: center top !important;
+  /* Start from top (cover/thumbnail view) */
+  transition: object-position 8s ease-in-out !important;
+  /* Slower, smoother transition */
+  transform: none !important;
+  /* Override any scale transforms */
+}
+
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"]:hover .portfolio-image img {
+  object-position: center bottom !important;
+  /* Scroll to bottom to show full UI/UX design */
+  transform: none !important;
+}
+
+/* Add a subtle overlay to indicate scrollable content */
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"] .portfolio-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"]:hover .portfolio-image::after {
+  opacity: 0;
+}
+
+/* Add a small indicator for UI/UX items */
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"] .portfolio-image::before {
+  content: '🖥️ Hover to scroll';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(16, 185, 129, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  z-index: 2;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"]:hover .portfolio-image::before {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+/* Add a subtle pulse animation to draw attention */
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(16, 185, 129, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+  }
+}
+
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"] .portfolio-image {
+  animation: pulseGlow 3s ease-in-out infinite;
+  border: 2px solid rgba(16, 185, 129, 0.2) !important;
+  /* Visual indicator */
+}
+
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"]:hover .portfolio-image {
+  animation: none;
+  border-color: rgba(16, 185, 129, 0.5) !important;
+}
+
+/* Debug: Make sure the effect is working */
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"] .portfolio-image img {
+  cursor: pointer !important;
+}
+
+.portfolio-grid .portfolio-item[data-categories*="ui-ux"]:hover .portfolio-image img {
+  cursor: grab !important;
+}
+
+/* Additional debug styles to ensure the effect is visible - FALLBACK RULES */
+.portfolio-item[data-categories*="ui-ux"] .portfolio-image {
+  border: 2px solid rgba(16, 185, 129, 0.5) !important;
+  animation: pulseGlow 3s ease-in-out infinite !important;
+  overflow: hidden !important;
+  position: relative !important;
+  height: 250px !important;
+}
+
+.portfolio-item[data-categories*="ui-ux"] .portfolio-image img {
+  width: 100% !important;
+  height: 800px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  transition: object-position 8s ease-in-out !important;
+  transform: none !important;
+  cursor: pointer !important;
+}
+
+.portfolio-item[data-categories*="ui-ux"]:hover .portfolio-image img {
+  object-position: center bottom !important;
+  transform: none !important;
+  cursor: grab !important;
+}
+
+/* Specific rule for Tebogo Portfolio to ensure it works */
+.portfolio-item[data-categories="ui-ux,creative,web-development"] .portfolio-image img {
+  width: 100% !important;
+  height: 800px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  transition: object-position 8s ease-in-out !important;
+  transform: none !important;
+}
+
+.portfolio-item[data-categories="ui-ux,creative,web-development"]:hover .portfolio-image img {
+  object-position: center bottom !important;
+  transform: none !important;
+}
+
+/* Fallback indicator */
+.portfolio-item[data-categories*="ui-ux"] .portfolio-image::before {
+  content: '🖥️ Hover to scroll' !important;
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  background: rgba(16, 185, 129, 0.9) !important;
+  color: white !important;
+  padding: 4px 8px !important;
+  border-radius: 12px !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+  z-index: 2 !important;
+  opacity: 0.9 !important;
+  transition: all 0.3s ease !important;
+}
+
+.portfolio-item[data-categories*="ui-ux"]:hover .portfolio-image::before {
+  opacity: 0 !important;
+  transform: translateY(-5px) !important;
+}
+
+/* Regular portfolio items hover effect */
+.portfolio-item:not([data-categories*="ui-ux"]):hover .portfolio-image img {
+  transform: scale(1.05);
+}
+
+.portfolio-content {
+  padding: 1.5rem;
+}
+
+.portfolio-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-category {
+  color: var(--primary-emerald);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.portfolio-description {
+  color: var(--text-gray-light);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.portfolio-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background: var(--bg-card-hover);
+  color: var(--text-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.portfolio-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-white);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--primary-emerald);
+}
+
+[data-theme="light"] .btn-secondary {
+  border: 1px solid var(--border-light);
+  color: var(--text-white);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--primary-emerald);
+  color: var(--primary-emerald);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center 25%; /* Better positioning to keep heads visible */
+  border-radius: 12px;
+  display: block;
+  transition: var(--transition);
+}
+
+/* Mobile image optimizations */
+@media (max-width: 768px) {
+  .card-image {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Mobile images are 3:4 — show full */
+    object-fit: contain; /* Avoid cropping on mobile */
+    object-position: center center;
+  }
+  
+  /* Hero carousel mobile images */
+  .carousel-slide:nth-child(1) {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/Homepage/hero carousel-mobile View/AI Automation slide.webp') !important;
+  }
+  
+  .carousel-slide:nth-child(2) {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/Homepage/hero carousel-mobile View/Web Development slide.webp') !important;
+  }
+  
+  .carousel-slide:nth-child(3) {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/Homepage/hero carousel-mobile View/Business Integration slide.webp') !important;
+  }
+  
+  /* Homepage Core Services mobile images */
+  .card img[src*="AI Automation card.webp"] {
+    content: url('../images/Homepage/Core Services Section-Mobile View/AI Automation card-mobile view.webp');
+  }
+  
+  .card img[src*="Web Development card.webp"] {
+    content: url('../images/Homepage/Core Services Section-Mobile View/Web Development card-mobile view.webp');
+  }
+  
+  .card img[src*="Creative Design card.webp"] {
+    content: url('../images/Homepage/Core Services Section-Mobile View/Creative Design card-mobile view.webp');
+  }
+  
+  /* Process Steps mobile images */
+  .card img[src*="Discovery step.webp"] {
+    content: url('../images/Homepage/Process Steps-Mobile View/Discovery step.webp');
+  }
+  
+  .card img[src*="Design step.webp"] {
+    content: url('../images/Homepage/Process Steps-Mobile View/Design step.webp');
+  }
+  
+  .card img[src*="Develop step.webp"] {
+    content: url('../images/Homepage/Process Steps-Mobile View/Develop step.webp');
+  }
+  
+  .card img[src*="Deploy step.webp"] {
+    content: url('../images/Homepage/Process Steps-Mobile View/Deploy step.webp');
+  }
+  
+  /* Why Choose Us mobile image */
+  .card img[src*="Why Choose Us section.webp"] {
+    content: url('../images/Homepage/Why Choose Us-Mobile View/Why Choose Us section-Mobile View.webp');
+  }
+  
+  /* Contact Section mobile image */
+  .card img[src*="Contact section.webp"] {
+    content: url('../images/Homepage/Contact Section-Mobile View/Contact section.webp');
+  }
+  
+  /* Services Page Core Services mobile images */
+  .service-item img[src*="AI Automation card.webp"] {
+    content: url('../images/Services Page/Core Services-Mobile View/AI Automation card.webp');
+  }
+  
+  .service-item img[src*="Web Development card.webp"] {
+    content: url('../images/Services Page/Core Services-Mobile View/Web Development card.webp');
+  }
+  
+  .service-item img[src*="Creative Design card.webp"] {
+    content: url('../images/Services Page/Core Services-Mobile View/Creative Design card.webp');
+  }
+  
+  .service-item img[src*="Premium Support card.webp"] {
+    content: url('../images/Services Page/Core Services-Mobile View/Premium Support card.webp');
+  }
+  
+  /* Business Integration mobile images */
+  .service-item img[src*="Zoho integration.webp"] {
+    content: url('../images/Services Page/Business Integration-Mobile View/Zoho integration.webp');
+  }
+  
+  .service-item img[src*="Google Workspace.webp"] {
+    content: url('../images/Services Page/Business Integration-Mobile View/Google Workspace.webp');
+  }
+  
+  .service-item img[src*="Microsoft 365.webp"] {
+    content: url('../images/Services Page/Business Integration-Mobile View/Microsoft 365.webp');
+  }
+  
+  .service-item img[src*="Custom integrations.webp"] {
+    content: url('../images/Services Page/Business Integration-Mobile View/Custom integrations.webp');
+  }
+  
+  /* Additional Services mobile images */
+  .service-item img[src*="E-commerce.webp"] {
+    content: url('../images/Services Page/Additional Services-Mobile View/E-commerce.webp');
+  }
+  
+  .service-item img[src*="Digital Marketing.webp"] {
+    content: url('../images/Services Page/Additional Services-Mobile View/Digital Marketing.webp');
+  }
+  
+  .service-item img[src*="Data Analytics.webp"] {
+    content: url('../images/Services Page/Additional Services-Mobile View/Data Analytics.webp');
+  }
+  
+  .service-item img[src*="Cloud Migration.webp"] {
+    content: url('../images/Services Page/Additional Services-Mobile View/Cloud Migration.webp');
+  }
+  
+  /* Specific adjustments for different service images */
+  .card img[alt*="AI Automation"] {
+    object-position: center 25%; /* Show person's face and laptop clearly */
+  }
+  
+  .card img[alt*="Web Development"] {
+    object-position: center 20%; /* Focus on development setup */
+  }
+  
+  .card img[alt*="Creative Design"] {
+    object-position: center 30%; /* Focus on design elements */
+  }
+  
+  /* Service page cards */
+  .service-item .card-image {
+    object-position: center 25%; /* Better positioning for service cards */
+  }
+  
+  .service-item img[alt*="Web Development"] {
+    object-position: center 20%; /* Focus on development setup */
+  }
+  
+  .service-item img[alt*="Creative Design"] {
+    object-position: center 30%; /* Focus on design elements */
+  }
+  
+  /* Process step images - improve mobile cropping to keep heads visible */
+  .card img[alt*="Discovery"],
+  .card img[alt*="Design"],
+  .card img[alt*="Develop"],
+  .card img[alt*="Deploy"] {
+    object-position: center 20%;
+  }
+  
+  /* Contact and Why Choose Us images - better vertical focus on mobile */
+  .card img[alt*="Contact"],
+  .card img[alt*="Why Choose Us"] {
+    object-position: center 20%;
+  }
+
+  /* Overlay cards with image backgrounds for better mobile readability */
+  .card:has(> img.card-image):not(:has(form)) {
+    position: relative;
+    color: var(--text-white);
+    padding: 2.5rem 1.75rem;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  .card:has(> img.card-image):not(:has(form)) > *:not(img.card-image) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card:has(> img.card-image):not(:has(form)) img.card-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.6);
+    z-index: 0;
+    border-radius: inherit;
+  }
+
+  .card:has(> img.card-image):not(:has(form))::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.85) 100%);
+    z-index: 0;
+    border-radius: inherit;
+  }
+
+  .card:has(> img.card-image):not(:has(form)) ul.service-benefits li::before {
+    color: var(--primary-gold);
+  }
+
+  /* Service item overlay */
+  .service-item {
+    position: relative;
+    overflow: hidden;
+    color: var(--text-white);
+    padding: 2.5rem 1.75rem;
+    min-height: 360px;
+  }
+
+  .service-item > *:not(img.card-image) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-item img.card-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.55);
+    z-index: 0;
+    border-radius: inherit;
+  }
+
+  .service-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0.88) 100%);
+    z-index: 0;
+    border-radius: inherit;
+  }
+
+  .service-item .service-description,
+  .service-item .service-benefits,
+  .service-item .service-meta,
+  .service-item .service-meta .service-price,
+  .service-item .service-meta .service-timeline {
+    color: var(--text-white);
+  }
+
+  .service-item .service-benefits li::before {
+    color: var(--primary-gold);
+  }
+
+  /* Exceptions: cards containing forms should remain standard */
+  .card:has(form) {
+    position: static;
+    color: inherit;
+    padding: 3rem 2rem;
+    background: var(--bg-card);
+  }
+
+  .card:has(form)::after {
+    display: none;
+  }
+
+  .card:has(form) img.card-image {
+    position: relative;
+    height: auto;
+    filter: none;
+    object-fit: contain;
+    z-index: auto;
+  }
+}
+
+/* Testimonials */
+.testimonial {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--text-gray-light);
+}
+
+[data-theme="light"] .testimonial {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-gray-light);
+  box-shadow: var(--shadow-light);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Language Toggle */
+.language-toggle {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-white);
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.language-toggle:hover {
+  background: var(--bg-card-hover);
+  color: var(--primary-emerald);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-description {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 999;
+    max-height: 0;
+    overflow: hidden;
+    display: none;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 500px;
+    display: flex;
+  }
+
+  .nav-toggles {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  [data-theme="light"] .nav-menu {
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .heading-primary {
+    font-size: 2.5rem;
+  }
+
+  .heading-secondary {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-tabs {
+    gap: 0.5rem;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Hero carousel mobile improvements */
+  .carousel-slide {
+    background-position: center 30% !important; /* Better mobile cropping for hero images */
+  }
+  
+  /* Card improvements for mobile */
+  .card {
+    padding: 1.5rem; /* Slightly less padding on mobile */
+  }
+
+  /* Mobile UI/UX scrolling - use touch/tap behavior */
+  .portfolio-grid .portfolio-item[data-categories*="ui-ux"] .portfolio-image img {
+    transition: object-position 4s ease-in-out !important;
+    /* Faster on mobile */
+    height: 500px !important;
+    /* Slightly smaller on mobile */
+  }
+
+  /* Update indicator text for mobile */
+  .portfolio-grid .portfolio-item[data-categories*="ui-ux"] .portfolio-image::before {
+    content: '📱 Touch to scroll';
+  }
+
+  /* Auto-scroll animation on mobile for UI/UX items */
+  .portfolio-grid .portfolio-item[data-categories*="ui-ux"] .portfolio-image img {
+    animation: mobileUIScroll 8s ease-in-out infinite alternate;
+    animation-play-state: paused;
+  }
+
+  .portfolio-grid .portfolio-item[data-categories*="ui-ux"]:active .portfolio-image img,
+  .portfolio-grid .portfolio-item[data-categories*="ui-ux"]:focus .portfolio-image img {
+    animation-play-state: running;
+  }
+}
+
+@keyframes mobileUIScroll {
+  0% {
+    object-position: center top;
+  }
+
+  100% {
+    object-position: center bottom;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-primary {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .service-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .portfolio-actions {
+    flex-direction: column;
+  }
+  
+  /* Small screen image optimizations */
+  .card-image {
+    height: auto; /* Follow image ratio */
+    width: 100%;
+    aspect-ratio: 3 / 4; /* Mobile images are 3:4 — show full */
+    object-fit: contain; /* Avoid cropping on very small screens */
+    object-position: center center;
+  }
+  
+  /* Specific small screen adjustments */
+  .card img[alt*="AI Automation"] {
+    object-position: center 25%; /* Ensure person's face and laptop are visible */
+  }
+  
+  .card img[alt*="Web Development"] {
+    object-position: center 15%; /* Focus on development setup */
+  }
+  
+  .card img[alt*="Creative Design"] {
+    object-position: center 25%; /* Focus on design elements */
+  }
+  
+  /* Service page images on small screens */
+  .service-item .card-image {
+    object-position: center 20%; /* Better cropping for service cards */
+  }
+
+  /* Extra-small screens: prioritise faces/top content for process + misc cards */
+  .card img[alt*="Discovery"],
+  .card img[alt*="Design"],
+  .card img[alt*="Develop"],
+  .card img[alt*="Deploy"] {
+    object-position: center 15%;
+  }
+
+  .card img[alt*="Contact"],
+  .card img[alt*="Why Choose Us"] {
+    object-position: center 18%;
+  }
+}
+/* Removed conflicting overrides that forced center centering on mobile */

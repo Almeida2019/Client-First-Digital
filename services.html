@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium digital services including AI automation, web development, creative design, and business system integration for South African businesses.">
+    <meta name="keywords" content="AI automation, web development, creative design, Zoho integration, Microsoft 365, Google Workspace, digital marketing, e-commerce">
+    <meta name="author" content="Client-First Digital">
+    
+    <title>Services - Client-First Digital</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Client First dark theme logo.webp" alt="Client-First Digital" class="logo-dark">
+                <img src="images/Client First light theme logo.webp" alt="Client-First Digital" class="logo-light">
+            </a>
+            
+            <ul class="nav-menu">
+                 <li><a href="index.html" class="nav-link" data-translate="nav.home">Home</a></li>
+                 <li><a href="services.html" class="nav-link active" data-translate="nav.services">Services</a></li>
+                 <li><a href="portfolio.html" class="nav-link" data-translate="nav.portfolio">Portfolio</a></li>
+                 <li><a href="index.html#about" class="nav-link" data-translate="nav.about">About</a></li>
+                 <li><a href="index.html#contact" class="nav-link" data-translate="nav.contact">Contact</a></li>
+                 <li><a href="index.html#contact" class="btn-cta" data-translate="nav.cta">Book Strategy Call</a></li>
+             </ul>
+
+             <div class="nav-toggles">
+                 <button class="language-toggle" onclick="toggleLanguage()">PT</button>
+                 <button class="theme-toggle">☀️</button>
+             </div>
+
+             <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Services Hero Section -->
+    <section class="section-hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/Services Page/Hero Banner/Services hero.webp'); background-size: cover; background-position: center;">
+        <div class="container">
+            <div class="hero-content animate-on-scroll" style="text-align: center;">
+                <div class="hero-subtitle" data-translate="services.hero.subtitle">Premium Digital Services</div>
+                <h1 class="heading-primary" data-translate-html="true" data-translate="services.hero.heading">Comprehensive <span class="gradient-text">Digital Solutions</span> for Your Business</h1>
+                <p class="text-large hero-description" data-translate="services.hero.description">From AI automation to web development, we deliver cutting-edge services that transform businesses globally and drive measurable results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Digital Services -->
+    <section class="section">
+        <div class="container">
+            <div class="service-category">
+                <h2 class="service-category-title" data-translate="services.core.title">Core Digital Services</h2>
+                <div class="grid grid-2">
+                    <div class="service-item animate-on-scroll" id="ai-automation">
+                        <img src="images/Services Page/Core Services/AI Automation card.webp" alt="AI Automation Service" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.core.ai.title">AI Automation</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.core.ai.body">Transform your business processes with intelligent automation solutions that eliminate manual tasks, reduce operational costs, and boost productivity by up to 300%.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.core.ai.point1">Custom AI workflow automation</li>
+                            <li data-translate="services.core.ai.point2">Intelligent document processing</li>
+                            <li data-translate="services.core.ai.point3">Automated customer service chatbots</li>
+                            <li data-translate="services.core.ai.point4">Data analysis and reporting automation</li>
+                            <li data-translate="services.core.ai.point5">Process optimization consulting</li>
+                            <li data-translate="services.core.ai.point6">ROI-focused implementation</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.core.ai.price">From R10,000</div>
+                                <div class="service-timeline" data-translate="services.core.ai.timeline">2-6 weeks delivery</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.getStarted">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item animate-on-scroll" id="web-development">
+                        <img src="images/Services Page/Core Services/Web Development card.webp" alt="Web Development Service" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.core.web.title">Web Development</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.core.web.body">Professional websites and web applications built with cutting-edge technologies like Next.js and React, delivering exceptional performance and user experiences.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.core.web.point1">Next.js & React development</li>
+                            <li data-translate="services.core.web.point2">Responsive mobile-first design</li>
+                            <li data-translate="services.core.web.point3">SEO optimization & fast loading</li>
+                            <li data-translate="services.core.web.point4">Progressive Web Apps (PWA)</li>
+                            <li data-translate="services.core.web.point5">Custom CMS integration</li>
+                            <li data-translate="services.core.web.point6">Performance monitoring & analytics</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.core.web.price">From R5,000</div>
+                                <div class="service-timeline" data-translate="services.core.web.timeline">1-4 weeks delivery</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.getQuote">Get Quote</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item animate-on-scroll" id="creative-design">
+                        <img src="images/Services Page/Core Services/Creative Design card.webp" alt="Creative Design Service" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.core.creative.title">Creative Design</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.core.creative.body">Stunning brand identities and UI/UX designs that captivate your audience, drive conversions, and establish your brand as a market leader.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.core.creative.point1">Complete brand identity packages</li>
+                            <li data-translate="services.core.creative.point2">UI/UX design for web & mobile</li>
+                            <li data-translate="services.core.creative.point3">Logo design & visual guidelines</li>
+                            <li data-translate="services.core.creative.point4">Marketing material design</li>
+                            <li data-translate="services.core.creative.point5">User research & testing</li>
+                            <li data-translate="services.core.creative.point6">Conversion-focused design strategies</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.core.creative.price">From R3,500</div>
+                                <div class="service-timeline" data-translate="services.core.creative.timeline">1-3 weeks delivery</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.startProject">Start Project</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item animate-on-scroll">
+                        <img src="images/Services Page/Core Services/Premium Support card.webp" alt="Premium Support Service" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.core.support.title">Premium Support</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.core.support.body">Round-the-clock maintenance, optimization, and support services to ensure your digital assets perform flawlessly and deliver consistent results.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.core.support.point1">24/7 technical support</li>
+                            <li data-translate="services.core.support.point2">Regular security updates & backups</li>
+                            <li data-translate="services.core.support.point3">Performance optimization</li>
+                            <li data-translate="services.core.support.point4">Content updates & maintenance</li>
+                            <li data-translate="services.core.support.point5">Monthly analytics reports</li>
+                            <li data-translate="services.core.support.point6">Priority response times</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.core.support.price">From R1,000/month</div>
+                                <div class="service-timeline" data-translate="services.core.support.timeline">Ongoing service</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.learnMore">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business System Integration -->
+    <section class="section" id="integration">
+        <div class="container">
+            <div class="service-category">
+                <h2 class="service-category-title" data-translate="services.integration.title">Business System Integration</h2>
+                <div class="grid grid-2">
+                    <div class="service-item animate-on-scroll">
+                        <img src="images/Services Page/Business Integration/Zoho integration.webp" alt="Zoho Ecosystem Integration" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.integration.zoho.title">Zoho Ecosystem</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.integration.zoho.body">Complete Zoho suite implementation and integration, streamlining your business operations with CRM, accounting, project management, and marketing automation.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.integration.zoho.point1">Zoho CRM setup & customization</li>
+                            <li data-translate="services.integration.zoho.point2">Zoho Books accounting integration</li>
+                            <li data-translate="services.integration.zoho.point3">Zoho Creator custom applications</li>
+                            <li data-translate="services.integration.zoho.point4">Zoho Campaigns email marketing</li>
+                            <li data-translate="services.integration.zoho.point5">Zoho Desk customer support system</li>
+                            <li data-translate="services.integration.zoho.point6">Cross-platform data synchronization</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.integration.zoho.price">From R8,000</div>
+                                <div class="service-timeline" data-translate="services.integration.zoho.timeline">2-4 weeks setup</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.getStarted">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item animate-on-scroll">
+                        <img src="images/Services Page/Business Integration/Google Workspace.webp" alt="Google Workspace Setup" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.integration.google.title">Google Workspace</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.integration.google.body">Professional Google Workspace setup and optimization, enhancing team collaboration with Gmail, Drive, Meet, Calendar, and advanced security features.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.integration.google.point1">Professional Gmail setup & migration</li>
+                            <li data-translate="services.integration.google.point2">Google Drive organization & permissions</li>
+                            <li data-translate="services.integration.google.point3">Google Meet conferencing setup</li>
+                            <li data-translate="services.integration.google.point4">Shared calendar management</li>
+                            <li data-translate="services.integration.google.point5">Advanced security configuration</li>
+                            <li data-translate="services.integration.google.point6">Team training & best practices</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.integration.google.price">From R4,000</div>
+                                <div class="service-timeline" data-translate="services.integration.google.timeline">1-2 weeks setup</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.getStarted">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item animate-on-scroll">
+                        <img src="images/Services Page/Business Integration/Microsoft 365.webp" alt="Microsoft 365 Ecosystem" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.integration.microsoft.title">Microsoft 365 Ecosystem</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.integration.microsoft.body">Comprehensive Microsoft 365 implementation with Teams, SharePoint, Power Platform, and advanced productivity tools for enterprise-level collaboration.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.integration.microsoft.point1">Microsoft Teams setup & optimization</li>
+                            <li data-translate="services.integration.microsoft.point2">SharePoint intranet development</li>
+                            <li data-translate="services.integration.microsoft.point3">Power Platform automation</li>
+                            <li data-translate="services.integration.microsoft.point4">Exchange email configuration</li>
+                            <li data-translate="services.integration.microsoft.point5">OneDrive business setup</li>
+                            <li data-translate="services.integration.microsoft.point6">Advanced compliance & security</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.integration.microsoft.price">From R7,500</div>
+                                <div class="service-timeline" data-translate="services.integration.microsoft.timeline">2-3 weeks setup</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.getStarted">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item animate-on-scroll">
+                        <img src="images/Services Page/Business Integration/Custom integrations.webp" alt="Custom Integrations Service" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.integration.custom.title">Custom Integrations</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.integration.custom.body">Seamless API connections between different business systems, creating unified workflows that eliminate data silos and improve operational efficiency.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.integration.custom.point1">REST API development & integration</li>
+                            <li data-translate="services.integration.custom.point2">Database synchronization</li>
+                            <li data-translate="services.integration.custom.point3">Third-party service connections</li>
+                            <li data-translate="services.integration.custom.point4">Real-time data sharing</li>
+                            <li data-translate="services.integration.custom.point5">Automated workflow triggers</li>
+                            <li data-translate="services.integration.custom.point6">Custom dashboard development</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.integration.custom.price">From R12,000</div>
+                                <div class="service-timeline" data-translate="services.integration.custom.timeline">3-6 weeks delivery</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.discussProject">Discuss Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="section">
+        <div class="container">
+            <div class="service-category">
+                <h2 class="service-category-title" data-translate="services.additional.title">Additional Services</h2>
+                <div class="grid grid-2">
+                    <div class="service-item animate-on-scroll">
+                        <img src="images/Services Page/Additional Services/E-commerce.webp" alt="E-commerce Solutions" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.additional.ecommerce.title">E-commerce Solutions</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.additional.ecommerce.body">Complete online store development with secure payment gateways, inventory management, and conversion optimization to maximize your online sales potential.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.additional.ecommerce.point1">Custom e-commerce development</li>
+                            <li data-translate="services.additional.ecommerce.point2">Payment gateway integration</li>
+                            <li data-translate="services.additional.ecommerce.point3">Inventory management systems</li>
+                            <li data-translate="services.additional.ecommerce.point4">Order tracking & fulfillment</li>
+                            <li data-translate="services.additional.ecommerce.point5">Mobile-optimized shopping experience</li>
+                            <li data-translate="services.additional.ecommerce.point6">Conversion rate optimization</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.additional.ecommerce.price">From R8,000</div>
+                                <div class="service-timeline" data-translate="services.additional.ecommerce.timeline">3-6 weeks delivery</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.startStore">Start Store</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item animate-on-scroll">
+                        <img src="images/Services Page/Additional Services/Digital Marketing.webp" alt="Digital Marketing Services" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.additional.marketing.title">Digital Marketing</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.additional.marketing.body">Comprehensive digital marketing strategies including SEO, social media management, and content marketing to increase your online visibility and drive qualified leads.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.additional.marketing.point1">Search Engine Optimization (SEO)</li>
+                            <li data-translate="services.additional.marketing.point2">Social media management</li>
+                            <li data-translate="services.additional.marketing.point3">Content marketing strategies</li>
+                            <li data-translate="services.additional.marketing.point4">Pay-per-click advertising (PPC)</li>
+                            <li data-translate="services.additional.marketing.point5">Email marketing campaigns</li>
+                            <li data-translate="services.additional.marketing.point6">Performance tracking & analytics</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.additional.marketing.price">From R4,500/month</div>
+                                <div class="service-timeline" data-translate="services.additional.marketing.timeline">Ongoing campaigns</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.growBusiness">Grow Business</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item animate-on-scroll">
+                        <img src="images/Services Page/Additional Services/Data Analytics.webp" alt="Data Analytics Service" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.additional.analytics.title">Data Analytics</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.additional.analytics.body">Advanced business intelligence and reporting solutions that transform your data into actionable insights, helping you make informed decisions and drive growth.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.additional.analytics.point1">Custom dashboard development</li>
+                            <li data-translate="services.additional.analytics.point2">Business intelligence reporting</li>
+                            <li data-translate="services.additional.analytics.point3">Data visualization & insights</li>
+                            <li data-translate="services.additional.analytics.point4">Automated reporting systems</li>
+                            <li data-translate="services.additional.analytics.point5">Performance KPI tracking</li>
+                            <li data-translate="services.additional.analytics.point6">Predictive analytics modeling</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.additional.analytics.price">From R7,500</div>
+                                <div class="service-timeline" data-translate="services.additional.analytics.timeline">2-4 weeks setup</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.analyzeData">Analyze Data</a>
+                        </div>
+                    </div>
+
+                    <div class="service-item animate-on-scroll">
+                        <img src="images/Services Page/Additional Services/Cloud Migration.webp" alt="Cloud Migration Service" class="card-image">
+                        <div class="service-header">
+                            <h3 class="service-title" data-translate="services.additional.cloud.title">Cloud Migration</h3>
+                        </div>
+                        <div class="service-description">
+                            <p data-translate="services.additional.cloud.body">Seamless migration of your business systems to cloud platforms, improving accessibility, security, and scalability while reducing operational costs.</p>
+                        </div>
+                        <ul class="service-benefits">
+                            <li data-translate="services.additional.cloud.point1">Cloud strategy & planning</li>
+                            <li data-translate="services.additional.cloud.point2">Data migration & security</li>
+                            <li data-translate="services.additional.cloud.point3">Infrastructure optimization</li>
+                            <li data-translate="services.additional.cloud.point4">Cost optimization strategies</li>
+                            <li data-translate="services.additional.cloud.point5">Staff training & support</li>
+                            <li data-translate="services.additional.cloud.point6">24/7 monitoring & maintenance</li>
+                        </ul>
+                        <div class="service-meta">
+                            <div>
+                                <div class="service-price" data-translate="services.additional.cloud.price">From R12,000</div>
+                                <div class="service-timeline" data-translate="services.additional.cloud.timeline">4-8 weeks migration</div>
+                            </div>
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.migrateNow">Migrate Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Metrics Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center animate-on-scroll" style="margin-bottom: 4rem;">
+                <h2 class="heading-secondary" data-translate-html="true" data-translate="services.metrics.heading">Our <span class="gradient-text">Success Metrics</span></h2>
+                <p class="text-large" data-translate="services.metrics.tagline">Measurable results that matter to your business</p>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="card animate-on-scroll text-center">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+                    <h3 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">300%</h3>
+                    <p style="color: var(--text-gray-light);" data-translate="services.metrics.stat1">Average productivity increase with AI automation</p>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚀</div>
+                    <h3 style="color: var(--primary-gold); margin-bottom: 0.5rem;">2.5x</h3>
+                    <p style="color: var(--text-gray-light);" data-translate="services.metrics.stat2">Faster website loading speeds on average</p>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📈</div>
+                    <h3 style="color: var(--primary-emerald); margin-bottom: 0.5rem;">150%</h3>
+                    <p style="color: var(--text-gray-light);" data-translate="services.metrics.stat3">Average increase in conversion rates</p>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">💰</div>
+                    <h3 style="color: var(--primary-gold); margin-bottom: 0.5rem;">40%</h3>
+                    <p style="color: var(--text-gray-light);" data-translate="services.metrics.stat4">Average cost reduction through automation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container">
+            <div class="card animate-on-scroll" style="text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(251, 191, 36, 0.1));">
+                <h2 class="heading-secondary" data-translate="services.cta.heading">Ready to Transform Your Business?</h2>
+                <p class="text-large" data-translate="services.cta.body">Let's discuss how our premium services can help you achieve your goals</p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#contact" class="btn-cta" data-translate="cta.bookConsultation">Book Free Consultation</a>
+                    <a href="portfolio.html" class="btn-secondary" data-translate="cta.viewWork">View Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--bg-card); padding: 3rem 0 1rem; margin-top: 4rem; border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <div class="grid grid-4" style="margin-bottom: 2rem;">
+                <div>
+                    <div style="margin-bottom: 1rem;">
+                        <img src="images/Client First dark theme logo.webp" alt="Client-First Digital" class="logo-dark" style="height: 32px; width: auto;">
+                        <img src="images/Client First light theme logo.webp" alt="Client-First Digital" class="logo-light" style="height: 32px; width: auto;">
+                    </div>
+                    <p style="color: var(--text-gray-light); margin-bottom: 1rem;" data-translate="footer.tagline">Premium digital solutions for global businesses.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--primary-emerald);" data-translate="footer.servicesTitle">Core Services</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="#ai-automation" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.ai">AI Automation</a></li>
+                        <li><a href="#web-development" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.web">Web Development</a></li>
+                        <li><a href="#creative-design" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.creative">Creative Design</a></li>
+                        <li><a href="#integration" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.integration">Business Integration</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--primary-emerald);" data-translate="footer.companyTitle">Company</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="portfolio.html" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.portfolio">Portfolio</a></li>
+                        <li><a href="index.html#about" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.about">About Us</a></li>
+                        <li><a href="index.html#contact" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.contact">Contact</a></li>
+                        <li><a href="#" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--primary-emerald);" data-translate="footer.contactTitle">Contact Info</h4>
+                    <p style="color: var(--text-gray-light); margin-bottom: 0.5rem;">📧 <a href="mailto:info@clientfirstdigital.com" style="color: var(--text-gray-light); text-decoration: none;">info@clientfirstdigital.com</a></p>
+                    <p style="color: var(--text-gray-light); margin-bottom: 0.5rem;">📱 <a href="https://wa.me/27769012803" target="_blank" rel="noopener" style="color: var(--text-gray-light); text-decoration: none;">+27 769 012 803</a></p>
+                    <p style="color: var(--text-gray-light);" data-translate="footer.location">📍 Pretoria, South Africa</p>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid var(--border-light); padding-top: 1rem; text-align: center;">
+                    <p style="color: var(--text-gray-light); margin: 0;" data-translate="footer.copy">
+                    © 2024 Client-First Digital. All rights reserved. | Empowering global businesses with premium digital solutions.
+                    </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

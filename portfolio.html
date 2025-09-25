@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of premium digital projects including wedding platforms, CRM systems, luxury rentals, and e-commerce solutions by Client-First Digital.">
+    <meta name="keywords" content="portfolio, web development projects, UI/UX design, e-commerce, corporate websites, South Africa">
+    <meta name="author" content="Client-First Digital">
+    
+    <title>Portfolio - Client-First Digital</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Client First dark theme logo.webp" alt="Client-First Digital" class="logo-dark">
+                <img src="images/Client First light theme logo.webp" alt="Client-First Digital" class="logo-light">
+            </a>
+            
+            <ul class="nav-menu">
+                 <li><a href="index.html" class="nav-link" data-translate="nav.home">Home</a></li>
+                 <li><a href="services.html" class="nav-link" data-translate="nav.services">Services</a></li>
+                 <li><a href="portfolio.html" class="nav-link active" data-translate="nav.portfolio">Portfolio</a></li>
+                 <li><a href="index.html#about" class="nav-link" data-translate="nav.about">About</a></li>
+                 <li><a href="index.html#contact" class="nav-link" data-translate="nav.contact">Contact</a></li>
+                 <li><a href="index.html#contact" class="btn-cta" data-translate="nav.cta">Book Strategy Call</a></li>
+             </ul>
+
+             <div class="nav-toggles">
+                 <button class="language-toggle" onclick="toggleLanguage()">PT</button>
+                 <button class="theme-toggle">☀️</button>
+             </div>
+
+             <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero Carousel Section -->
+    <section class="hero-carousel">
+        <div class="carousel-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/Portfolio Page/Hero Banner/Portfolio hero.webp'); background-size: cover; background-position: center;">
+            <div class="hero-content animate-on-scroll">
+                <div class="hero-subtitle" data-translate="portfolio.hero1.subtitle">Our Premium Portfolio</div>
+                <h1 class="heading-primary" data-translate-html="true" data-translate="portfolio.hero1.heading">Exceptional <span class="gradient-text">Digital Experiences</span> We've Created</h1>
+                <p class="text-large hero-description" data-translate="portfolio.hero1.body">Explore our collection of award-winning websites, applications, and digital solutions that have transformed businesses globally.</p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#portfolio-grid" class="btn-cta" data-translate="cta.viewProjects">View Projects</a>
+                    <a href="index.html#contact" class="btn-secondary" data-translate="cta.startProject">Start Your Project</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/Portfolio Page/Hero Banner/Portfolio hero2.webp'); background-size: cover; background-position: center;">
+            <div class="hero-content animate-on-scroll">
+                <div class="hero-subtitle" data-translate="portfolio.hero2.subtitle">Award-Winning Designs</div>
+                <h1 class="heading-primary" data-translate-html="true" data-translate="portfolio.hero2.heading">Transforming <span class="gradient-text">Global Businesses</span> Through Design</h1>
+                <p class="text-large hero-description" data-translate="portfolio.hero2.body">From luxury e-commerce platforms to corporate websites, our portfolio showcases innovative solutions that drive real business results and user engagement.</p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="services.html" class="btn-cta" data-translate="cta.ourServices">Our Services</a>
+                    <a href="index.html#contact" class="btn-secondary" data-translate="cta.getQuote">Get Quote</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-indicators">
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter Tabs -->
+    <section class="section" id="portfolio-grid">
+        <div class="container">
+            <div class="portfolio-tabs animate-on-scroll">
+                <button class="tab-btn active" data-category="all" data-translate="portfolio.filter.all">All Projects</button>
+                <button class="tab-btn" data-category="ui-ux" data-translate="portfolio.filter.uiux">UI/UX Design</button>
+                <button class="tab-btn" data-category="web-development" data-translate="portfolio.filter.web">Web Development</button>
+                <button class="tab-btn" data-category="e-commerce" data-translate="portfolio.filter.ecommerce">E-commerce</button>
+                <button class="tab-btn" data-category="corporate" data-translate="portfolio.filter.corporate">Corporate</button>
+                <button class="tab-btn" data-category="creative" data-translate="portfolio.filter.creative">Creative</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Eternal Moments Wedding Platform -->
+                <div class="portfolio-item animate-on-scroll" data-categories="ui-ux,web-development,creative">
+                    <div class="portfolio-image">
+                        <img src="images/ui:ux/eternal-moments-wedding_ui_ux.webp" alt="Eternal Moments Wedding Platform UI/UX Design" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="portfolio.items.eternal.title">Eternal Moments Wedding Platform</h3>
+                        <div class="portfolio-category" data-translate="portfolio.items.eternal.category">UI/UX Design • Creative • Web Development</div>
+                        <p class="portfolio-description" data-translate="portfolio.items.eternal.description">Luxury wedding planning platform celebrating love across all cultures. Features elegant design, cultural ceremony guides, and comprehensive planning tools for couples and event planners.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="https://leornadia.github.io/eternal-moments-wedding/#/" target="_blank" class="btn-cta" data-translate="cta.livePreview">Live Preview</a>
+                            <a href="index.html#contact" class="btn-secondary" data-translate="cta.hireUs">Hire Us</a>
+                        </div>
+                        
+                        <div class="testimonial" data-translate="portfolio.items.eternal.testimonial">
+                            "The Eternal Moments platform perfectly captures the essence of luxury wedding planning. The cultural integration features are exceptional and have helped us serve diverse couples beautifully." - Wedding Planner Client
+                        </div>
+                        
+                        <div style="margin-top: 1rem; color: var(--text-gray-light); font-size: 0.9rem;">
+                            <i class="fas fa-calendar-alt"></i> <span data-translate="portfolio.items.eternal.completed">Completed: October 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ANGBU CRM System -->
+                <div class="portfolio-item animate-on-scroll" data-categories="ui-ux,web-development,corporate">
+                    <div class="portfolio-image">
+                        <img src="images/ui:ux/angbu crm_ui_ux.webp" alt="ANGBU CRM System UI/UX Design" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="portfolio.items.angbu.title">ANGBU CRM System</h3>
+                        <div class="portfolio-category" data-translate="portfolio.items.angbu.category">UI/UX Design • Web Development • Corporate</div>
+                        <p class="portfolio-description" data-translate="portfolio.items.angbu.description">Comprehensive educational management platform for Angbu Training Centre featuring student management, course tracking, and bilingual support for English language learning programs.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Database</span>
+                            <span class="tech-tag">Multi-language</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="https://angbucrm.vercel.app/" target="_blank" class="btn-cta" data-translate="cta.livePreview">Live Preview</a>
+                            <a href="index.html#contact" class="btn-secondary" data-translate="cta.getCRM">Get CRM</a>
+                        </div>
+                        
+                        <div class="testimonial" data-translate="portfolio.items.angbu.testimonial">
+                            "The ANGBU CRM has revolutionized how we manage our English classes. The bilingual interface and student tracking features are exactly what we needed for our growing training center." - ATC Management
+                        </div>
+                        
+                        <div style="margin-top: 1rem; color: var(--text-gray-light); font-size: 0.9rem;">
+                            <i class="fas fa-calendar-alt"></i> <span data-translate="portfolio.items.angbu.completed">Completed: September 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YSAM Luxury Car Rental -->
+                <div class="portfolio-item animate-on-scroll" data-categories="e-commerce,ui-ux,web-development">
+                    <div class="portfolio-image">
+                        <img src="images/ui:ux/YSAM-Rental_ui_ux.webp" alt="YSAM Luxury Car Rental UI/UX Design" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="portfolio.items.ysam.title">YSAM Luxury Car Rental</h3>
+                        <div class="portfolio-category" data-translate="portfolio.items.ysam.category">E-commerce • UI/UX Design • Web Development</div>
+                        <p class="portfolio-description" data-translate="portfolio.items.ysam.description">Premium car rental service specializing in luxury Toyota Land Cruiser vehicles for executive transport, weddings, and VIP services in Cabinda with professional driver services.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="https://almeida2019.github.io/YSAM-Rental/" target="_blank" class="btn-cta" data-translate="cta.livePreview">Live Preview</a>
+                            <a href="index.html#contact" class="btn-secondary" data-translate="cta.buildSimilar">Build Similar</a>
+                        </div>
+                        
+                        <div class="testimonial" data-translate="portfolio.items.ysam.testimonial">
+                            "YSAM's website perfectly represents our luxury service. The elegant design and clear pricing structure have significantly increased our online bookings and client inquiries." - YSAM Management
+                        </div>
+                        
+                        <div style="margin-top: 1rem; color: var(--text-gray-light); font-size: 0.9rem;">
+                            <i class="fas fa-calendar-alt"></i> <span data-translate="portfolio.items.ysam.completed">Completed: August 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tebogo Portfolio -->
+                <div class="portfolio-item animate-on-scroll" data-categories="ui-ux,creative,web-development">
+                    <div class="portfolio-image">
+                        <img src="images/ui:ux/tebogo-portfolio_ui_ux.webp" alt="Tebogo Portfolio Website UI/UX Design" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="portfolio.items.tebogo.title">Tebogo Portfolio Website</h3>
+                        <div class="portfolio-category" data-translate="portfolio.items.tebogo.category">UI/UX Design • Creative • Web Development</div>
+                        <p class="portfolio-description" data-translate="portfolio.items.tebogo.description">Modern, professional portfolio website showcasing creative work and expertise. Features smooth animations, responsive design, and an elegant presentation of projects and skills.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Animations</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="https://v0-tebogo-portfolio.vercel.app/" target="_blank" class="btn-cta" data-translate="cta.livePreview">Live Preview</a>
+                            <a href="index.html#contact" class="btn-secondary" data-translate="cta.createPortfolio">Create Portfolio</a>
+                        </div>
+                        
+                        <div class="testimonial" data-translate="portfolio.items.tebogo.testimonial">
+                            "My new portfolio website has been a game-changer for my freelance career. The professional design and smooth user experience have helped me land several high-value clients." - Tebogo, Creative Professional
+                        </div>
+                        
+                        <div style="margin-top: 1rem; color: var(--text-gray-light); font-size: 0.9rem;">
+                            <i class="fas fa-calendar-alt"></i> <span data-translate="portfolio.items.tebogo.completed">Completed: July 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eco Bean Products -->
+                <div class="portfolio-item animate-on-scroll" data-categories="ui-ux,e-commerce,web-development,creative">
+                    <div class="portfolio-image">
+                        <img src="images/ui:ux/co-bean_ui_ux.webp" alt="Eco Bean Products UI/UX Design" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="portfolio.items.ecobean.title">Eco Bean Products</h3>
+                        <div class="portfolio-category" data-translate="portfolio.items.ecobean.category">UI/UX Design • E-commerce • Web Development • Creative</div>
+                        <p class="portfolio-description" data-translate="portfolio.items.ecobean.description">Sustainable product showcase featuring eco-friendly coffee beans and related products. Clean, modern design emphasizing environmental consciousness and product quality.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Product Catalog</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="https://leornadia.github.io/eco-bean/products.html" target="_blank" class="btn-cta" data-translate="cta.livePreview">Live Preview</a>
+                            <a href="index.html#contact" class="btn-secondary" data-translate="cta.startEcommerce">Start E-commerce</a>
+                        </div>
+                        
+                        <div class="testimonial" data-translate="portfolio.items.ecobean.testimonial">
+                            "Eco Bean's product showcase beautifully represents our commitment to sustainability. The clean design and intuitive navigation have helped increase our product inquiries by 200%." - Eco Bean Founder
+                        </div>
+                        
+                        <div style="margin-top: 1rem; color: var(--text-gray-light); font-size: 0.9rem;">
+                            <i class="fas fa-calendar-alt"></i> <span data-translate="portfolio.items.ecobean.completed">Completed: June 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ubuntu Fashion -->
+                <div class="portfolio-item animate-on-scroll" data-categories="e-commerce,ui-ux,creative">
+                    <div class="portfolio-image">
+                        <img src="images/ui:ux/Ubuntu-Fashion_ui_ux.webp" alt="Ubuntu Fashion Platform UI/UX Design" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="portfolio.items.ubuntu.title">Ubuntu Fashion Platform</h3>
+                        <div class="portfolio-category" data-translate="portfolio.items.ubuntu.category">E-commerce • UI/UX Design • Creative</div>
+                        <p class="portfolio-description" data-translate="portfolio.items.ubuntu.description">Contemporary African fashion e-commerce platform celebrating Ubuntu philosophy through modern designs. Features sophisticated product galleries, cultural storytelling, and seamless shopping experience.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">E-commerce</span>
+                            <span class="tech-tag">Payment Gateway</span>
+                            <span class="tech-tag">Cultural Design</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.viewProject">View Project</a>
+                            <a href="index.html#contact" class="btn-secondary" data-translate="cta.fashionEcommerce">Fashion E-commerce</a>
+                        </div>
+                        
+                        <div class="testimonial" data-translate="portfolio.items.ubuntu.testimonial">
+                            "Ubuntu Fashion's platform perfectly captures our brand's essence of African elegance and modern sophistication. The cultural elements integrated with e-commerce functionality are outstanding." - Ubuntu Fashion Team
+                        </div>
+                        
+                        <div style="margin-top: 1rem; color: var(--text-gray-light); font-size: 0.9rem;">
+                            <i class="fas fa-calendar-alt"></i> <span data-translate="portfolio.items.ubuntu.completed">Completed: May 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luxuria Furniture -->
+                <div class="portfolio-item animate-on-scroll" data-categories="e-commerce,ui-ux,web-development">
+                    <div class="portfolio-image">
+                        <img src="images/ui:ux/luxuria-furniture-ui_ux.webp" alt="Luxuria Furniture E-commerce UI/UX Design" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="portfolio.items.luxuria.title">Luxuria Furniture E-commerce</h3>
+                        <div class="portfolio-category" data-translate="portfolio.items.luxuria.category">E-commerce • UI/UX Design • Web Development</div>
+                        <p class="portfolio-description" data-translate="portfolio.items.luxuria.description">Premium furniture e-commerce platform showcasing luxury home furnishings with elegant product displays, 360° views, and sophisticated shopping experience for discerning customers.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">E-commerce</span>
+                            <span class="tech-tag">3D Visualization</span>
+                            <span class="tech-tag">Premium Design</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="index.html#contact" class="btn-cta" data-translate="cta.viewProject">View Project</a>
+                            <a href="index.html#contact" class="btn-secondary" data-translate="cta.furnitureStore">Furniture Store</a>
+                        </div>
+                        
+                        <div class="testimonial" data-translate="portfolio.items.luxuria.testimonial">
+                            "Luxuria's e-commerce platform elevated our brand to new heights. The premium design and intuitive shopping experience have increased our online sales by 180% within the first quarter." - Luxuria Furniture Management
+                        </div>
+                        
+                        <div style="margin-top: 1rem; color: var(--text-gray-light); font-size: 0.9rem;">
+                            <i class="fas fa-calendar-alt"></i> <span data-translate="portfolio.items.luxuria.completed">Completed: March 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ATC LDA Corporate -->
+                <div class="portfolio-item animate-on-scroll" data-categories="ui-ux,corporate,web-development">
+                    <div class="portfolio-image">
+                        <img src="images/ui:ux/atc-lda.com_ui_ux.webp" alt="ATC LDA Corporate Website UI/UX Design" loading="lazy">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="portfolio.items.atc.title">ATC LDA Corporate Website</h3>
+                        <div class="portfolio-category" data-translate="portfolio.items.atc.category">UI/UX Design • Corporate • Web Development</div>
+                        <p class="portfolio-description" data-translate="portfolio.items.atc.description">Professional corporate website for ATC LDA showcasing business services, company values, and client testimonials. Features modern design with emphasis on trust and professionalism.</p>
+                        
+                        <div class="portfolio-tech">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">Custom Theme</span>
+                            <span class="tech-tag">SEO Optimized</span>
+                            <span class="tech-tag">Corporate Identity</span>
+                        </div>
+                        
+                        <div class="portfolio-actions">
+                            <a href="https://atc-lda.com/" target="_blank" class="btn-cta" data-translate="cta.livePreview">Live Preview</a>
+                            <a href="index.html#contact" class="btn-secondary" data-translate="cta.corporateSite">Corporate Site</a>
+                        </div>
+                        
+                        <div class="testimonial" data-translate="portfolio.items.atc.testimonial">
+                            "Our new corporate website has transformed how clients perceive our company. The professional design and clear service presentation have significantly improved our business inquiries." - ATC LDA Management
+                        </div>
+                        
+                        <div style="margin-top: 1rem; color: var(--text-gray-light); font-size: 0.9rem;">
+                            <i class="fas fa-calendar-alt"></i> <span data-translate="portfolio.items.atc.completed">Completed: April 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Statistics -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center animate-on-scroll" style="margin-bottom: 4rem;">
+                <h2 class="heading-secondary" data-translate-html="true" data-translate="portfolio.stats.heading">Portfolio <span class="gradient-text">Impact Statistics</span></h2>
+                <p class="text-large" data-translate="portfolio.stats.tagline">Measurable results from our portfolio projects</p>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="card animate-on-scroll text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📈</div>
+                    <h3 style="color: var(--primary-emerald); font-size: 2rem; margin-bottom: 0.5rem;">200%</h3>
+                    <p style="color: var(--text-gray-light);" data-translate="portfolio.stats.stat1">Average increase in client inquiries</p>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                    <h3 style="color: var(--primary-gold); font-size: 2rem; margin-bottom: 0.5rem;">98%</h3>
+                    <p style="color: var(--text-gray-light);" data-translate="portfolio.stats.stat2">Client satisfaction rate</p>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                    <h3 style="color: var(--primary-emerald); font-size: 2rem; margin-bottom: 0.5rem;">3x</h3>
+                    <p style="color: var(--text-gray-light);" data-translate="portfolio.stats.stat3">Faster loading speeds achieved</p>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                    <h3 style="color: var(--primary-gold); font-size: 2rem; margin-bottom: 0.5rem;">180%</h3>
+                    <p style="color: var(--text-gray-light);" data-translate="portfolio.stats.stat4">Sales increase for e-commerce clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies We Use -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center animate-on-scroll" style="margin-bottom: 4rem;">
+                <h2 class="heading-secondary" data-translate-html="true" data-translate="portfolio.tech.heading">Technologies <span class="gradient-text">We Master</span></h2>
+                <p class="text-large" data-translate="portfolio.tech.tagline">Cutting-edge tools and frameworks powering our portfolio projects</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card animate-on-scroll text-center">
+                    <div class="card-icon" style="margin: 0 auto 1rem;">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3 class="heading-tertiary" data-translate="portfolio.tech.frontend.title">Frontend Excellence</h3>
+                    <p class="text-base" data-translate="portfolio.tech.frontend.body">React, Next.js, Vue.js, TypeScript, and modern CSS frameworks for exceptional user experiences.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <div class="card-icon" style="margin: 0 auto 1rem;">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="heading-tertiary" data-translate="portfolio.tech.backend.title">Backend Power</h3>
+                    <p class="text-base" data-translate="portfolio.tech.backend.body">Node.js, Python, databases, and cloud services for robust, scalable applications.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <div class="card-icon" style="margin: 0 auto 1rem;">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="heading-tertiary" data-translate="portfolio.tech.design.title">Design & UX</h3>
+                    <p class="text-base" data-translate="portfolio.tech.design.body">Responsive design, accessibility standards, and conversion-focused user experiences.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">Adobe XD</span>
+                        <span class="tech-tag">Tailwind</span>
+                        <span class="tech-tag">SASS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section">
+        <div class="container">
+            <div class="card animate-on-scroll" style="text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(251, 191, 36, 0.1));">
+                <h2 class="heading-secondary" data-translate-html="true" data-translate="portfolio.cta.heading">Ready to Join Our <span class="gradient-text">Success Stories</span>?</h2>
+                <p class="text-large" data-translate="portfolio.cta.body">Let's create something extraordinary together. Your project could be our next portfolio highlight.</p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#contact" class="btn-cta" data-translate="cta.startProject">Start Your Project</a>
+                    <a href="services.html" class="btn-secondary" data-translate="cta.viewServices">View Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--bg-card); padding: 3rem 0 1rem; margin-top: 4rem; border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <div class="grid grid-4" style="margin-bottom: 2rem;">
+                <div>
+                    <div style="margin-bottom: 1rem;">
+                        <img src="images/Client First dark theme logo.webp" alt="Client-First Digital" class="logo-dark" style="height: 32px; width: auto;">
+                        <img src="images/Client First light theme logo.webp" alt="Client-First Digital" class="logo-light" style="height: 32px; width: auto;">
+                    </div>
+                    <p style="color: var(--text-gray-light); margin-bottom: 1rem;" data-translate="footer.tagline">Premium digital solutions for global businesses.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--primary-emerald);" data-translate="portfolio.footer.categoriesTitle">Portfolio Categories</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="#" onclick="document.querySelector('[data-category=ui-ux]').click()" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="portfolio.footer.uiux">UI/UX Design</a></li>
+                        <li><a href="#" onclick="document.querySelector('[data-category=web-development]').click()" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="portfolio.footer.web">Web Development</a></li>
+                        <li><a href="#" onclick="document.querySelector('[data-category=e-commerce]').click()" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="portfolio.footer.ecommerce">E-commerce</a></li>
+                        <li><a href="#" onclick="document.querySelector('[data-category=corporate]').click()" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="portfolio.footer.corporate">Corporate</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--primary-emerald);" data-translate="footer.companyTitle">Company</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="services.html" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.services">Services</a></li>
+                        <li><a href="index.html#about" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.about">About Us</a></li>
+                        <li><a href="index.html#contact" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.contact">Contact</a></li>
+                        <li><a href="#" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--primary-emerald);" data-translate="footer.contactTitle">Contact Info</h4>
+                    <p style="color: var(--text-gray-light); margin-bottom: 0.5rem;">📧 <a href="mailto:info@clientfirstdigital.com" style="color: var(--text-gray-light); text-decoration: none;">info@clientfirstdigital.com</a></p>
+                    <p style="color: var(--text-gray-light); margin-bottom: 0.5rem;">📱 <a href="https://wa.me/27769012803" target="_blank" rel="noopener" style="color: var(--text-gray-light); text-decoration: none;">+27 769 012 803</a></p>
+                    <p style="color: var(--text-gray-light);" data-translate="footer.location">📍 Pretoria, South Africa</p>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid var(--border-light); padding-top: 1rem; text-align: center;">
+                <p style="color: var(--text-gray-light); margin: 0;" data-translate="footer.copy">
+                    © 2024 Client-First Digital. All rights reserved. | Empowering global businesses with premium digital solutions.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

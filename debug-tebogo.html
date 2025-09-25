@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Tebogo Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 2rem;
+            background: var(--bg-primary);
+            color: white;
+        }
+        .debug-info {
+            background: #333;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            font-family: monospace;
+        }
+        .test-container {
+            max-width: 400px;
+            margin: 2rem auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Tebogo Portfolio Issue</h1>
+    
+    <div class="debug-info">
+        <strong>Testing different variations of the Tebogo Portfolio item:</strong>
+    </div>
+
+    <!-- Test 1: Exact copy from portfolio.html -->
+    <div class="test-container">
+        <h3>Test 1: Exact copy from portfolio.html</h3>
+        <div class="portfolio-grid">
+            <div class="portfolio-item animate-on-scroll visible" data-categories="ui-ux,creative,web-development">
+                <div class="portfolio-image">
+                    <img src="images/ui:ux/tebogo-portfolio_ui_ux.webp" alt="Tebogo Portfolio Website UI/UX Design" loading="lazy">
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Tebogo Portfolio Website</h3>
+                    <div class="portfolio-category">UI/UX Design • Creative • Web Development</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test 2: Simplified version -->
+    <div class="test-container">
+        <h3>Test 2: Simplified version</h3>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-categories="ui-ux">
+                <div class="portfolio-image">
+                    <img src="images/ui:ux/tebogo-portfolio_ui_ux.webp" alt="Test">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Simple Test</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test 3: Working example for comparison -->
+    <div class="test-container">
+        <h3>Test 3: Known working example (Eternal Moments)</h3>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-categories="ui-ux,web-development,creative">
+                <div class="portfolio-image">
+                    <img src="images/ui:ux/eternal-moments-wedding_ui_ux.webp" alt="Working Example">
+                </div>
+                <div class="portfolio-content">
+                    <h3>Working Example</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="debug-info" id="debug-output">
+        <strong>Debug Output:</strong><br>
+        <div id="debug-results"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const debugResults = document.getElementById('debug-results');
+            let output = '';
+            
+            // Check all portfolio items
+            const allItems = document.querySelectorAll('.portfolio-item');
+            output += `Total portfolio items found: ${allItems.length}<br>`;
+            
+            allItems.forEach((item, index) => {
+                const categories = item.getAttribute('data-categories');
+                const title = item.querySelector('.portfolio-title')?.textContent || `Item ${index + 1}`;
+                const image = item.querySelector('.portfolio-image img');
+                const imageContainer = item.querySelector('.portfolio-image');
+                
+                output += `<br><strong>${title}:</strong><br>`;
+                output += `  Categories: "${categories}"<br>`;
+                output += `  Has ui-ux: ${categories?.includes('ui-ux')}<br>`;
+                
+                if (image) {
+                    const computedStyle = getComputedStyle(image);
+                    const containerStyle = getComputedStyle(imageContainer);
+                    
+                    output += `  Image height: ${computedStyle.height}<br>`;
+                    output += `  Container height: ${containerStyle.height}<br>`;
+                    output += `  Container border: ${containerStyle.border}<br>`;
+                    output += `  Object position: ${computedStyle.objectPosition}<br>`;
+                    output += `  Transition: ${computedStyle.transition}<br>`;
+                }
+                
+                // Test CSS selector matching
+                const matchesSelector = item.matches('[data-categories*="ui-ux"]');
+                output += `  Matches [data-categories*="ui-ux"]: ${matchesSelector}<br>`;
+                
+                // Test specific selector
+                const matchesFullSelector = item.matches('.portfolio-grid .portfolio-item[data-categories*="ui-ux"]');
+                output += `  Matches full selector: ${matchesFullSelector}<br>`;
+            });
+            
+            debugResults.innerHTML = output;
+        });
+    </script>
+</body>
+</html>

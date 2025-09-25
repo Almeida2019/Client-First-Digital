@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug UI/UX Scroll Effect</title>
+    <style>
+        body {
+            background: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+        }
+        
+        .debug-container {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 2px solid #10b981;
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .debug-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid red; /* Debug border */
+        }
+        
+        .debug-image {
+            width: 100%;
+            height: 600px; /* Taller than container */
+            object-fit: cover;
+            object-position: center top;
+            transition: object-position 6s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .debug-image:hover {
+            object-position: center bottom;
+        }
+        
+        .debug-content {
+            padding: 1rem;
+        }
+        
+        .debug-info {
+            background: #333;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug UI/UX Scroll Effect</h1>
+    
+    <div class="debug-info">
+        <strong>Instructions:</strong> Hover over the image below. It should slowly scroll from top to bottom over 6 seconds.
+        <br><br>
+        <strong>Image specs:</strong>
+        <br>• Container height: 250px (red border)
+        <br>• Image height: 600px (taller than container)
+        <br>• object-fit: cover
+        <br>• object-position: center top → center bottom
+    </div>
+    
+    <div class="debug-container">
+        <div class="debug-image-container">
+            <img src="images/ui:ux/eternal-moments-wedding_ui_ux.webp" 
+                 alt="Test Image" 
+                 class="debug-image"
+                 onmouseenter="console.log('Mouse enter - should scroll to bottom')"
+                 onmouseleave="console.log('Mouse leave - should scroll to top')">
+        </div>
+        <div class="debug-content">
+            <h3>Test Image</h3>
+            <p>This is a simplified version to test the scrolling effect.</p>
+        </div>
+    </div>
+    
+    <div class="debug-info">
+        <strong>Troubleshooting:</strong>
+        <br>• Open browser dev tools and check console for logs
+        <br>• The red border shows the container boundaries
+        <br>• Image should be taller than the red container
+        <br>• Hover should trigger smooth scrolling animation
+    </div>
+    
+    <script>
+        // Additional debug logging
+        document.addEventListener('DOMContentLoaded', () => {
+            const img = document.querySelector('.debug-image');
+            console.log('Image loaded:', img);
+            console.log('Image natural dimensions:', img.naturalWidth, 'x', img.naturalHeight);
+            console.log('Image computed style height:', getComputedStyle(img).height);
+            console.log('Container height:', getComputedStyle(img.parentElement).height);
+        });
+    </script>
+</body>
+</html>

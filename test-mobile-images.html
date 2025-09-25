@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Image Cropping Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 1rem;
+            background: var(--bg-primary);
+        }
+
+        .test-section {
+            margin-bottom: 3rem;
+        }
+
+        .test-title {
+            color: var(--text-white);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .device-info {
+            text-align: center;
+            color: var(--text-gray-light);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="device-info">
+        <strong>Mobile Image Cropping Test - FIXED VERSION</strong><br>
+        <span id="viewport-info">Resize your browser window or view on mobile to test the image cropping improvements.</span><br>
+        <strong>Key Fix:</strong> Changed from <code>object-position: center top</code> to <code>center 20%</code> to keep heads visible
+    </div>
+
+    <div class="test-section">
+        <h2 class="test-title">Service Cards (Home Page Style)</h2>
+        <div class="grid grid-3">
+            <div class="card animate-on-scroll visible">
+                <img src="images/Homepage/Core Services Section/AI Automation card.webp" alt="AI Automation Service"
+                    class="card-image">
+                <h3 class="heading-tertiary">AI Automation</h3>
+                <p class="text-base">Transform your workflow with intelligent automation solutions that save time,
+                    reduce costs, and eliminate manual processes.</p>
+            </div>
+
+            <div class="card animate-on-scroll visible">
+                <img src="images/Homepage/Core Services Section/Web Development card.webp" alt="Web Development Service"
+                    class="card-image">
+                <h3 class="heading-tertiary">Web Development</h3>
+                <p class="text-base">Professional websites and web applications built with modern technologies like
+                    Next.js, React, and responsive design principles.</p>
+            </div>
+
+            <div class="card animate-on-scroll visible">
+                <img src="images/Homepage/Core Services Section/Creative Design card.webp" alt="Creative Design Service"
+                    class="card-image">
+                <h3 class="heading-tertiary">Creative Design</h3>
+                <p class="text-base">Stunning brand identities and UI/UX designs that captivate your audience and drive
+                    conversions across all platforms.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2 class="test-title">Service Items (Services Page Style)</h2>
+        <div class="grid grid-2">
+            <div class="service-item animate-on-scroll visible">
+                <img src="images/Services Page/Core Services/AI Automation card.webp" alt="AI Automation Service"
+                    class="card-image">
+                <div class="service-header">
+                    <h3 class="service-title">AI Automation</h3>
+                </div>
+                <div class="service-description">
+                    <p>Transform your business processes with intelligent automation solutions that eliminate manual
+                        tasks, reduce operational costs, and boost productivity by up to 300%.</p>
+                </div>
+            </div>
+
+            <div class="service-item animate-on-scroll visible">
+                <img src="images/Services Page/Core Services/Web Development card.webp" alt="Web Development Service"
+                    class="card-image">
+                <div class="service-header">
+                    <h3 class="service-title">Web Development</h3>
+                </div>
+                <div class="service-description">
+                    <p>Professional websites and web applications built with cutting-edge technologies like Next.js and
+                        React, delivering exceptional performance and user experiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="device-info">
+        <strong>What to Look For:</strong><br>
+        • Images should be cropped to show the most important parts (faces, laptops, work areas)<br>
+        • On mobile (< 768px): Images focus on upper 20-30% of the original image<br>
+            • On small mobile (< 480px): Even tighter cropping to upper 15-25%<br>
+                • AI Automation image should show the person and laptop clearly<br>
+    </div>
+
+    <div class="device-info">
+        <strong>✅ FIXED - What to Look For:</strong><br>
+        • <strong>Desktop:</strong> object-position: center 20% (shows person's head and upper body)<br>
+        • <strong>Mobile (< 768px):</strong> Height 150px, object-position: center 15% (keeps heads visible)<br>
+        • <strong>Small Mobile (< 480px):</strong> Height 140px, object-position: center 10% (tight crop on heads)<br>
+        • <strong>AI Automation:</strong> Specific positioning to show person's face and laptop screen<br>
+        • <strong>No more cut-off heads!</strong> Images now focus on the important upper portions
+    </div>
+
+    <script>
+        // Display current viewport size for testing
+        function updateViewportInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const deviceInfo = document.querySelector('.device-info');
+
+            let deviceType = 'Desktop';
+            if (width <= 480) deviceType = 'Small Mobile';
+            else if (width <= 768) deviceType = 'Mobile/Tablet';
+
+            deviceInfo.innerHTML = `
+                <strong>Current Viewport: ${width}px × ${height}px (${deviceType})</strong><br>
+                Mobile Image Cropping Test - Resize to see different cropping behaviors
+            `;
+        }
+
+        updateViewportInfo();
+        window.addEventListener('resize', updateViewportInfo);
+    </script>
+</body>
+
+</html>

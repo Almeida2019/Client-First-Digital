@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Image Cropping - FIXED</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 1rem;
+            background: var(--bg-primary);
+        }
+        .test-section {
+            margin-bottom: 3rem;
+        }
+        .test-title {
+            color: var(--text-white);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .status-indicator {
+            text-align: center;
+            color: var(--primary-emerald);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: 8px;
+            border: 2px solid var(--primary-emerald);
+        }
+        .viewport-info {
+            text-align: center;
+            color: var(--text-gray-light);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-indicator">
+        <strong>✅ MOBILE IMAGE CROPPING FIXED!</strong><br>
+        <span>Images now properly crop to show heads and important content on mobile devices</span>
+    </div>
+
+    <div class="viewport-info" id="viewport-info">
+        Resize your browser or view on mobile to test the improved image cropping
+    </div>
+
+    <div class="test-section">
+        <h2 class="test-title">Homepage Core Services (Fixed Cropping)</h2>
+        <div class="grid grid-3">
+            <div class="card animate-on-scroll visible">
+                <img src="images/Homepage/Core Services Section/AI Automation card.webp" 
+                     alt="AI Automation Service" 
+                     class="card-image">
+                <h3 class="heading-tertiary">AI Automation</h3>
+                <p class="text-base">Now shows person's face and laptop clearly on mobile!</p>
+            </div>
+
+            <div class="card animate-on-scroll visible">
+                <img src="images/Homepage/Core Services Section/Web Development card.webp" 
+                     alt="Web Development Service" 
+                     class="card-image">
+                <h3 class="heading-tertiary">Web Development</h3>
+                <p class="text-base">Better cropping focuses on development setup.</p>
+            </div>
+
+            <div class="card animate-on-scroll visible">
+                <img src="images/Homepage/Core Services Section/Creative Design card.webp" 
+                     alt="Creative Design Service" 
+                     class="card-image">
+                <h3 class="heading-tertiary">Creative Design</h3>
+                <p class="text-base">Improved positioning shows design elements properly.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2 class="test-title">Services Page Items (Fixed Cropping)</h2>
+        <div class="grid grid-2">
+            <div class="service-item animate-on-scroll visible">
+                <img src="images/Services Page/Core Services/AI Automation card.webp" 
+                     alt="AI Automation Service" 
+                     class="card-image">
+                <div class="service-header">
+                    <h3 class="service-title">AI Automation</h3>
+                </div>
+                <div class="service-description">
+                    <p>Fixed mobile cropping ensures the person's face and laptop are always visible.</p>
+                </div>
+            </div>
+
+            <div class="service-item animate-on-scroll visible">
+                <img src="images/Services Page/Core Services/Web Development card.webp" 
+                     alt="Web Development Service" 
+                     class="card-image">
+                <div class="service-header">
+                    <h3 class="service-title">Web Development</h3>
+                </div>
+                <div class="service-description">
+                    <p>Better positioning focuses on the development workspace and tools.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="status-indicator">
+        <strong>🔧 What Was Fixed:</strong><br>
+        • Changed object-position from "center top" to "center 20-30%"<br>
+        • Mobile (< 768px): Uses "center 20%" positioning<br>
+        • Small mobile (< 480px): Uses "center 20%" with better specific adjustments<br>
+        • AI Automation: Now shows person's face and laptop (center 25%)<br>
+        • Web Development: Better focus on development setup (center 20%)<br>
+        • Creative Design: Improved positioning for design elements (center 30%)<br>
+        <strong>✅ No more cut-off heads on mobile!</strong>
+    </div>
+
+    <script>
+        function updateViewportInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const info = document.getElementById('viewport-info');
+            
+            let deviceType = 'Desktop';
+            let imageHeight = '200px';
+            let positioning = 'center 25%';
+            
+            if (width <= 480) {
+                deviceType = 'Small Mobile';
+                imageHeight = '140px';
+                positioning = 'center 20%';
+            } else if (width <= 768) {
+                deviceType = 'Mobile/Tablet';
+                imageHeight = '150px';
+                positioning = 'center 20%';
+            }
+            
+            info.innerHTML = `
+                <strong>Current: ${width}px × ${height}px (${deviceType})</strong><br>
+                Image Height: ${imageHeight} | Positioning: ${positioning}
+            `;
+        }
+        
+        updateViewportInfo();
+        window.addEventListener('resize', updateViewportInfo);
+    </script>
+</body>
+</html>

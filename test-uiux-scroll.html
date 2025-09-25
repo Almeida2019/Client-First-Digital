@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Scroll Effect Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 2rem;
+            background: var(--bg-primary);
+        }
+        .test-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .test-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-white);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1 class="test-title">UI/UX Scroll Effect Test</h1>
+        <p style="text-align: center; color: var(--text-gray-light); margin-bottom: 2rem;">
+            Hover over the images below to see the slow scrolling effect
+        </p>
+        
+        <!-- Portfolio Grid Container (matches actual structure) -->
+        <div class="portfolio-grid">
+            <!-- Test UI/UX Portfolio Item -->
+            <div class="portfolio-item animate-on-scroll visible" data-categories="ui-ux,web-development,creative">
+                <div class="portfolio-image">
+                    <img src="images/ui:ux/eternal-moments-wedding_ui_ux.webp" alt="Eternal Moments Wedding Platform UI/UX Design" loading="lazy">
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Eternal Moments Wedding Platform</h3>
+                    <div class="portfolio-category">UI/UX Design • Creative • Web Development</div>
+                    <p class="portfolio-description">Hover over the image above to see the slow scrolling effect that reveals the full UI/UX design from top to bottom. The effect takes 6 seconds to complete.</p>
+                </div>
+            </div>
+            
+            <!-- Test with another UI/UX item -->
+            <div class="portfolio-item animate-on-scroll visible" data-categories="ui-ux,creative">
+                <div class="portfolio-image">
+                    <img src="images/ui:ux/tebogo-portfolio_ui_ux.webp" alt="Tebogo Portfolio UI/UX Design" loading="lazy">
+                </div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">Tebogo Portfolio Website</h3>
+                    <div class="portfolio-category">UI/UX Design • Creative</div>
+                    <p class="portfolio-description">Another example of the scrolling effect on UI/UX portfolio items.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

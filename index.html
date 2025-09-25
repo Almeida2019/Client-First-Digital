@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Affordable digital services in South Africa including AI automation, web development, design, e-commerce, and marketing for small and medium businesses.">
+    <meta name="keywords" content="web development, AI automation, digital marketing, South Africa, Zoho, Microsoft 365, Google Workspace, affordable digital services South Africa, SME solutions, small business web design, budget-friendly marketing">
+    <meta name="author" content="Client-First Digital">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Client-First Digital - Premium Digital Solutions">
+    <meta property="og:description" content="Transform your business with our premium AI automation, web development, and creative design services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <title>Client-First Digital - Premium Digital Solutions</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/Client First dark theme logo.webp" alt="Client-First Digital" class="logo-dark">
+                <img src="images/Client First light theme logo.webp" alt="Client-First Digital" class="logo-light">
+            </a>
+            
+            <ul class="nav-menu">
+                 <li><a href="index.html" class="nav-link" data-translate="nav.home">Home</a></li>
+                 <li><a href="services.html" class="nav-link" data-translate="nav.services">Services</a></li>
+                 <li><a href="portfolio.html" class="nav-link" data-translate="nav.portfolio">Portfolio</a></li>
+                 <li><a href="#about" class="nav-link" data-translate="nav.about">About</a></li>
+                 <li><a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a></li>
+                 <li><a href="#contact" class="btn-cta" data-translate="nav.cta">Get Free Quote</a></li>
+             </ul>
+
+             <div class="nav-toggles">
+                 <button class="language-toggle" onclick="toggleLanguage()">PT</button>
+                 <button class="theme-toggle">☀️</button>
+             </div>
+
+             <button class="mobile-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel Section -->
+    <section class="hero-carousel">
+        <div class="carousel-slide active" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/Homepage/hero carousel/AI Automation slide 1.webp'); background-size: cover; background-position: center;">
+            <div class="hero-content animate-on-scroll">
+                <div class="hero-subtitle" data-translate="hero.subtitle">Premium Digital Solutions</div>
+                <h1 class="heading-primary">
+                    <span data-translate="hero.headingLead">Affordable Digital Solutions for</span>&nbsp;
+                    <span class="gradient-text" data-translate="hero.headingHighlight">Growing Businesses</span>
+                </h1>
+                <p class="text-large hero-description" data-translate="hero.description">High-impact services in AI, web, design, and marketing — tailored for South African entrepreneurs and SMEs.</p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="services.html" class="btn-cta" data-translate="hero.ctaPrimary">Explore Services</a>
+                    <a href="portfolio.html" class="btn-secondary" data-translate="hero.ctaSecondary">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/Homepage/hero carousel/Web Development slide 2.webp'); background-size: cover; background-position: center;">
+            <div class="hero-content animate-on-scroll">
+                <div class="hero-subtitle" data-translate="hero.slide2.subtitle">South Africa's Premier Agency</div>
+                <h1 class="heading-primary" data-translate-html="true" data-translate="hero.slide2.heading">Expert <span class="gradient-text">Web Development</span> & Design</h1>
+                <p class="text-large hero-description" data-translate="hero.slide2.body">From stunning websites to complex web applications, we deliver exceptional digital experiences that drive results and exceed expectations.</p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="portfolio.html" class="btn-cta" data-translate="hero.slide2.ctaPrimary">See Our Work</a>
+                    <a href="#contact" class="btn-secondary" data-translate="hero.slide2.ctaSecondary">Get Quote</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/Homepage/hero carousel/Business Integration slide.webp'); background-size: cover; background-position: center;">
+            <div class="hero-content animate-on-scroll">
+                <div class="hero-subtitle" data-translate="hero.slide3.subtitle">Business System Integration</div>
+                <h1 class="heading-primary" data-translate-html="true" data-translate="hero.slide3.heading">Seamless <span class="gradient-text">Zoho & Microsoft 365</span> Solutions</h1>
+                <p class="text-large hero-description" data-translate="hero.slide3.body">Streamline your operations with expert integration of Zoho CRM, Microsoft 365, and Google Workspace. Boost productivity and collaboration.</p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="services.html#integration" class="btn-cta" data-translate="hero.slide3.ctaPrimary">Learn More</a>
+                    <a href="#contact" class="btn-secondary" data-translate="hero.slide3.ctaSecondary">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="carousel-indicators">
+            <div class="indicator active"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center animate-on-scroll" style="margin-bottom: 4rem;">
+                <h2 class="heading-secondary">
+                    <span data-translate="index.core.headingLead">Our</span>
+                    &nbsp;<span class="gradient-text" data-translate="index.core.headingHighlight">Core Services</span>
+                </h2>
+                <p class="text-large" data-translate="index.core.tagline">Comprehensive digital solutions tailored for South African businesses</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card animate-on-scroll">
+                    <img src="images/Homepage/Core Services Section/AI Automation card.webp" alt="AI Automation Service" class="card-image">
+                    <h3 class="heading-tertiary" data-translate="index.core.ai.title">AI Automation</h3>
+                    <p class="text-base" data-translate="index.core.ai.body">Transform your workflow with intelligent automation solutions that save time, reduce costs, and eliminate manual processes.</p>
+                    <ul class="service-benefits">
+                        <li data-translate="index.core.ai.point1">Custom AI solutions</li>
+                        <li data-translate="index.core.ai.point2">Workflow automation</li>
+                        <li data-translate="index.core.ai.point3">Process optimization</li>
+                        <li data-translate="index.core.ai.point4">ROI-focused results</li>
+                    </ul>
+                    <a href="services.html#ai-automation" class="btn-cta" style="margin-top: auto;" data-translate="cta.learnMore">Learn More</a>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <img src="images/Homepage/Core Services Section/Web Development card.webp" alt="Web Development Service" class="card-image">
+                    <h3 class="heading-tertiary" data-translate="index.core.web.title">Web Development</h3>
+                    <p class="text-base" data-translate="index.core.web.body">Professional websites and web applications built with modern technologies like Next.js, React, and responsive design principles.</p>
+                    <ul class="service-benefits">
+                        <li data-translate="index.core.web.point1">Next.js & React development</li>
+                        <li data-translate="index.core.web.point2">Responsive design</li>
+                        <li data-translate="index.core.web.point3">Performance optimization</li>
+                        <li data-translate="index.core.web.point4">SEO-ready structure</li>
+                    </ul>
+                    <a href="services.html#web-development" class="btn-cta" style="margin-top: auto;" data-translate="cta.learnMore">Learn More</a>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <img src="images/Homepage/Core Services Section/Creative Design card.webp" alt="Creative Design Service" class="card-image">
+                    <h3 class="heading-tertiary" data-translate="index.core.creative.title">Creative Design</h3>
+                    <p class="text-base" data-translate="index.core.creative.body">Stunning brand identities and UI/UX designs that captivate your audience and drive conversions across all platforms.</p>
+                    <ul class="service-benefits">
+                        <li data-translate="index.core.creative.point1">Brand identity design</li>
+                        <li data-translate="index.core.creative.point2">UI/UX design</li>
+                        <li data-translate="index.core.creative.point3">Visual storytelling</li>
+                        <li data-translate="index.core.creative.point4">Conversion optimization</li>
+                    </ul>
+                    <a href="services.html#creative-design" class="btn-cta" style="margin-top: auto;" data-translate="cta.learnMore">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+                <div class="animate-on-scroll">
+                    <h2 class="heading-secondary" data-translate-html="true" data-translate="index.why.heading">Why Choose <span class="gradient-text">Client-First Digital</span>?</h2>
+                    <p class="text-large" data-translate="index.why.intro">We're not just another digital agency. We're your strategic partner in digital transformation, committed to delivering exceptional results that drive real business growth.</p>
+                    
+                    <div class="grid" style="gap: 1.5rem; margin-top: 2rem;">
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="background: linear-gradient(135deg, var(--primary-emerald), var(--primary-gold)); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-trophy" style="color: black;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem; font-weight: 600;" data-translate="index.why.point1.title">Proven Track Record</h4>
+                                <p style="color: var(--text-gray-light); margin: 0;" data-translate="index.why.point1.body">500+ successful projects delivered across various industries</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="background: linear-gradient(135deg, var(--primary-emerald), var(--primary-gold)); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-rocket" style="color: black;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem; font-weight: 600;" data-translate="index.why.point2.title">Cutting-Edge Technology</h4>
+                                <p style="color: var(--text-gray-light); margin: 0;" data-translate="index.why.point2.body">Latest tools and frameworks for superior performance</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <div style="background: linear-gradient(135deg, var(--primary-emerald), var(--primary-gold)); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-headset" style="color: black;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem; font-weight: 600;" data-translate="index.why.point3.title">24/7 Premium Support</h4>
+                                <p style="color: var(--text-gray-light); margin: 0;" data-translate="index.why.point3.body">Round-the-clock maintenance and optimization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div class="card" style="text-align: center; padding: 3rem 2rem;">
+                        <img src="images/Homepage/Why Choose Us/Why Choose Us section.webp" alt="Why Choose Us Success Stats" class="card-image" style="margin-bottom: 1rem;">
+                        <h3 class="heading-tertiary gradient-text" data-translate="index.why.statsTitle">Our Success Stats</h3>
+                        <div class="grid" style="gap: 2rem; margin-top: 2rem;">
+                            <div>
+                                <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-emerald); margin-bottom: 0.5rem;">500+</div>
+                                <div style="color: var(--text-gray-light);" data-translate="index.why.stat1">Projects Completed</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-gold); margin-bottom: 0.5rem;">98%</div>
+                                <div style="color: var(--text-gray-light);" data-translate="index.why.stat2">Client Satisfaction</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-emerald); margin-bottom: 0.5rem;">5+</div>
+                                <div style="color: var(--text-gray-light);" data-translate="index.why.stat3">Years Experience</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-gold); margin-bottom: 0.5rem;">24/7</div>
+                                <div style="color: var(--text-gray-light);" data-translate="index.why.stat4">Support Available</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Process Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="text-center animate-on-scroll" style="margin-bottom: 4rem;">
+                <h2 class="heading-secondary">
+                    <span data-translate="index.process.headingLead">Our</span>
+                    &nbsp;<span class="gradient-text" data-translate="index.process.headingHighlight">Proven Process</span>
+                </h2>
+                <p class="text-large" data-translate="index.process.tagline">From strategy to implementation, we follow a systematic approach that ensures success</p>
+            </div>
+            
+            <div class="grid grid-4">
+                <div class="card animate-on-scroll text-center">
+                    <img src="images/Homepage/Process Steps/Discovery step.webp" alt="Discovery Process Step" class="card-image">
+                    <h3 class="heading-tertiary" data-translate="index.process.step1.title">1. Discovery</h3>
+                    <p class="text-base" data-translate="index.process.step1.body">We dive deep into understanding your business, goals, and challenges to create a tailored strategy.</p>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <img src="images/Homepage/Process Steps/Design step.webp" alt="Design Process Step" class="card-image">
+                    <h3 class="heading-tertiary" data-translate="index.process.step2.title">2. Design</h3>
+                    <p class="text-base" data-translate="index.process.step2.body">Our creative team develops stunning designs and user experiences that align with your brand vision.</p>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <img src="images/Homepage/Process Steps/Develop step.webp" alt="Develop Process Step" class="card-image">
+                    <h3 class="heading-tertiary" data-translate="index.process.step3.title">3. Develop</h3>
+                    <p class="text-base" data-translate="index.process.step3.body">We build robust, scalable solutions using cutting-edge technologies and best practices.</p>
+                </div>
+                
+                <div class="card animate-on-scroll text-center">
+                    <img src="images/Homepage/Process Steps/Deploy step.webp" alt="Deploy Process Step" class="card-image">
+                    <h3 class="heading-tertiary" data-translate="index.process.step4.title">4. Deploy</h3>
+                    <p class="text-base" data-translate="index.process.step4.body">We launch your solution and provide ongoing support to ensure continued success and growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+                <div class="animate-on-scroll">
+                    <h2 class="heading-secondary" data-translate-html="true" data-translate="index.contact.heading">Ready to <span class="gradient-text">Transform</span> Your Business?</h2>
+                    <p class="text-large" data-translate="index.contact.tagline">Let's discuss how our premium digital solutions can help you achieve your business goals and stay ahead of the competition.</p>
+                    
+                    <div style="margin-top: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="background: linear-gradient(135deg, var(--primary-emerald), var(--primary-gold)); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fab fa-whatsapp" style="color: black;"></i>
+                            </div>
+                            <div>
+                                <strong data-translate="index.contact.whatsappLabel">WhatsApp:</strong> <a href="https://wa.me/27769012803" target="_blank" rel="noopener" style="color: var(--text-white); text-decoration: none;">+27 769 012 803</a>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="background: linear-gradient(135deg, var(--primary-emerald), var(--primary-gold)); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-envelope" style="color: black;"></i>
+                            </div>
+                            <div>
+                                <strong data-translate="index.contact.emailLabel">Email:</strong> <a href="mailto:info@clientfirstdigital.com" style="color: var(--text-white); text-decoration: none;">info@clientfirstdigital.com</a>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="background: linear-gradient(135deg, var(--primary-emerald), var(--primary-gold)); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-map-marker-alt" style="color: black;"></i>
+                            </div>
+                            <div>
+                                <strong data-translate="index.contact.locationLabel">Location:</strong> <span data-translate="index.contact.locationValue">Pretoria, South Africa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-on-scroll">
+                    <div class="card" style="padding: 3rem 2rem;">
+                        <img src="images/Homepage/Contact Section/Contact section.webp" alt="Contact Us Background" class="card-image" style="margin-bottom: 1rem;">
+                        <h3 class="heading-tertiary" data-translate="index.contact.formTitle">Book Your Free Strategy Call</h3>
+                        <form id="contact-form">
+                            <div style="margin-bottom: 1rem;">
+                                <input type="text" name="name" placeholder="Your Name" required 
+                                       data-translate-placeholder="form.namePlaceholder"
+                                       style="width: 100%; padding: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-white);">
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <input type="email" name="email" placeholder="Your Email" required 
+                                       data-translate-placeholder="form.emailPlaceholder"
+                                       style="width: 100%; padding: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-white);">
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem;">
+                                <select name="service" required 
+                                        style="width: 100%; padding: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-white);">
+                                    <option value="" data-translate="form.option.default">Select Service Interest</option>
+                                    <option value="ai-automation" data-translate="form.option.ai-automation">AI Automation</option>
+                                    <option value="web-development" data-translate="form.option.web-development">Web Development</option>
+                                    <option value="creative-design" data-translate="form.option.creative-design">Creative Design</option>
+                                    <option value="business-integration" data-translate="form.option.business-integration">Business Integration</option>
+                                    <option value="e-commerce" data-translate="form.option.e-commerce">E-commerce Solutions</option>
+                                    <option value="digital-marketing" data-translate="form.option.digital-marketing">Digital Marketing</option>
+                                </select>
+                            </div>
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <textarea name="message" placeholder="Tell us about your project..." rows="4" required 
+                                          data-translate-placeholder="form.messagePlaceholder"
+                                          style="width: 100%; padding: 0.75rem; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 8px; color: var(--text-white); resize: vertical;"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-cta" style="width: 100%;" data-translate="form.submit">
+                                Get Free Quote
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: var(--bg-card); padding: 3rem 0 1rem; margin-top: 4rem; border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <div class="grid grid-4" style="margin-bottom: 2rem;">
+                <div>
+                    <div style="margin-bottom: 1rem;">
+                        <img src="images/Client First dark theme logo.webp" alt="Client-First Digital" class="logo-dark" style="height: 32px; width: auto;">
+                        <img src="images/Client First light theme logo.webp" alt="Client-First Digital" class="logo-light" style="height: 32px; width: auto;">
+                    </div>
+                    <p style="color: var(--text-gray-light); margin-bottom: 1rem;" data-translate="footer.tagline">Affordable digital solutions for South African SMEs.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="color: var(--text-white); font-size: 1.25rem; transition: var(--transition);">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--primary-emerald);" data-translate="footer.servicesTitle">Services</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="services.html#ai-automation" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.ai">AI Automation</a></li>
+                        <li><a href="services.html#web-development" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.web">Web Development</a></li>
+                        <li><a href="services.html#creative-design" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.creative">Creative Design</a></li>
+                        <li><a href="services.html#business-integration" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.integration">Business Integration</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--primary-emerald);" data-translate="footer.companyTitle">Company</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="portfolio.html" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.portfolio">Portfolio</a></li>
+                        <li><a href="#about" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.about">About Us</a></li>
+                        <li><a href="#contact" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.contact">Contact</a></li>
+                        <li><a href="#" style="color: var(--text-gray-light); text-decoration: none; margin-bottom: 0.5rem; display: block;" data-translate="footer.privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--primary-emerald);" data-translate="footer.contactTitle">Contact Info</h4>
+                    <p style="color: var(--text-gray-light); margin-bottom: 0.5rem;">📧 <a href="mailto:info@clientfirstdigital.com" style="color: var(--text-gray-light); text-decoration: none;">info@clientfirstdigital.com</a></p>
+                    <p style="color: var(--text-gray-light); margin-bottom: 0.5rem;">📱 <a href="https://wa.me/27769012803" target="_blank" rel="noopener" style="color: var(--text-gray-light); text-decoration: none;">+27 769 012 803</a></p>
+                    <p style="color: var(--text-gray-light);" data-translate="footer.location">📍 Pretoria, South Africa</p>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid var(--border-light); padding-top: 1rem; text-align: center;">
+                    <p style="color: var(--text-gray-light); margin: 0;" data-translate="footer.copy">
+                    © 2024 Client-First Digital. All rights reserved. | Empowering global businesses with premium digital solutions.
+                    </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

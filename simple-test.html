@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple UI/UX Test</title>
+    <style>
+        body {
+            background: #000;
+            color: white;
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            border: 2px solid #10b981;
+            border-radius: 16px;
+            position: relative;
+        }
+        
+        .scroll-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            object-position: center top;
+            transition: object-position 6s ease-in-out;
+        }
+        
+        .scroll-image:hover {
+            object-position: center bottom;
+        }
+        
+        .indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(16, 185, 129, 0.9);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple UI/UX Scroll Test</h1>
+        <p>This is a minimal test without any complex CSS. Hover over the image:</p>
+        
+        <div class="image-container">
+            <div class="indicator">🖥️ Hover to scroll</div>
+            <img src="images/ui:ux/tebogo-portfolio_ui_ux.webp" 
+                 alt="Tebogo Portfolio" 
+                 class="scroll-image">
+        </div>
+        
+        <p style="margin-top: 1rem;">
+            If this works, the issue is with the complex CSS selectors.<br>
+            If this doesn't work, the issue might be with the image itself.
+        </p>
+        
+        <div style="margin-top: 2rem;">
+            <h3>Test with Eternal Moments (known working):</h3>
+            <div class="image-container">
+                <div class="indicator">🖥️ Hover to scroll</div>
+                <img src="images/ui:ux/eternal-moments-wedding_ui_ux.webp" 
+                     alt="Eternal Moments" 
+                     class="scroll-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

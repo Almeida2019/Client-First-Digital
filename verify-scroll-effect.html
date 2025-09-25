@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify UI/UX Scroll Effect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding: 2rem;
+            background: var(--bg-primary);
+        }
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .test-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--text-white);
+        }
+        .status {
+            text-align: center;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        .working { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        .not-working { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+    </style>
+</head>
+<body>
+    <h1 class="test-title">Verify UI/UX Scroll Effect</h1>
+    <p style="text-align: center; color: var(--text-gray-light); margin-bottom: 2rem;">
+        Testing all UI/UX items that should have the scrolling effect
+    </p>
+
+    <div class="portfolio-grid test-grid">
+        <!-- ANGBU CRM System - Should work now -->
+        <div class="portfolio-item animate-on-scroll visible" data-categories="ui-ux,web-development,corporate">
+            <div class="portfolio-image">
+                <img src="images/ui:ux/angbu crm_ui_ux.webp" alt="ANGBU CRM System UI/UX Design" loading="lazy">
+            </div>
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">ANGBU CRM System</h3>
+                <div class="portfolio-category">UI/UX Design • Web Development • Corporate</div>
+                <div class="status working">✅ Should work - has ui-ux category</div>
+            </div>
+        </div>
+
+        <!-- Tebogo Portfolio Website - Should work -->
+        <div class="portfolio-item animate-on-scroll visible" data-categories="ui-ux,creative,web-development">
+            <div class="portfolio-image">
+                <img src="images/ui:ux/tebogo-portfolio_ui_ux.webp" alt="Tebogo Portfolio Website UI/UX Design" loading="lazy">
+            </div>
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">Tebogo Portfolio Website</h3>
+                <div class="portfolio-category">UI/UX Design • Creative • Web Development</div>
+                <div class="status working">✅ Should work - has ui-ux category</div>
+            </div>
+        </div>
+
+        <!-- Eco Bean Products - Should work now -->
+        <div class="portfolio-item animate-on-scroll visible" data-categories="ui-ux,e-commerce,web-development,creative">
+            <div class="portfolio-image">
+                <img src="images/ui:ux/co-bean_ui_ux.webp" alt="Eco Bean Products UI/UX Design" loading="lazy">
+            </div>
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">Eco Bean Products</h3>
+                <div class="portfolio-category">UI/UX Design • E-commerce • Web Development • Creative</div>
+                <div class="status working">✅ Should work - has ui-ux category</div>
+            </div>
+        </div>
+
+        <!-- ATC LDA Corporate Website - Should work now -->
+        <div class="portfolio-item animate-on-scroll visible" data-categories="ui-ux,corporate,web-development">
+            <div class="portfolio-image">
+                <img src="images/ui:ux/atc-lda.com_ui_ux.webp" alt="ATC LDA Corporate Website UI/UX Design" loading="lazy">
+            </div>
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">ATC LDA Corporate Website</h3>
+                <div class="portfolio-category">UI/UX Design • Corporate • Web Development</div>
+                <div class="status working">✅ Should work - has ui-ux category</div>
+            </div>
+        </div>
+
+        <!-- Working example for comparison -->
+        <div class="portfolio-item animate-on-scroll visible" data-categories="ui-ux,web-development,creative">
+            <div class="portfolio-image">
+                <img src="images/ui:ux/eternal-moments-wedding_ui_ux.webp" alt="Eternal Moments Wedding Platform UI/UX Design" loading="lazy">
+            </div>
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">Eternal Moments Wedding Platform</h3>
+                <div class="portfolio-category">UI/UX Design • Creative • Web Development</div>
+                <div class="status working">✅ Known working example</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem; color: var(--text-gray-light);">
+        <p><strong>Instructions:</strong></p>
+        <p>1. Hover over each image above</p>
+        <p>2. You should see a slow 6-second scroll from top to bottom</p>
+        <p>3. Look for the green pulsing border and "🖥️ Hover to scroll" indicator</p>
+        <p>4. Open browser dev tools to check for any console errors</p>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Debug logging
+        document.addEventListener('DOMContentLoaded', () => {
+            const uiuxItems = document.querySelectorAll('.portfolio-item[data-categories*="ui-ux"]');
+            console.log('Found UI/UX items:', uiuxItems.length);
+            
+            uiuxItems.forEach((item, index) => {
+                const title = item.querySelector('.portfolio-title').textContent;
+                const categories = item.getAttribute('data-categories');
+                console.log(`Item ${index + 1}: ${title} - Categories: ${categories}`);
+                
+                // Test if CSS selector matches
+                const hasScrollEffect = getComputedStyle(item.querySelector('.portfolio-image')).borderColor.includes('16, 185, 129');
+                console.log(`  - Has scroll effect CSS: ${hasScrollEffect}`);
+            });
+        });
+    </script>
+</body>
+</html>
